@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh 'psql --username=pguser02 --dbname=postgres --file=createtables.sql'
             }
+        }
         stage('JoinTest1') {
             steps {
                 sh 'psql --username=pguser02 --dbname=postgres --file=jointest-ci.sql'
