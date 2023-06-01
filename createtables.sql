@@ -8,3 +8,6 @@ CREATE TABLE t_join AS SELECT *
        FROM   t_test
        ORDER BY random()
        LIMIT 1000000;
+
+VACUUM FULL t_test;
+VACUUM FULL t_join;
